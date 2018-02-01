@@ -1,0 +1,6 @@
+I had this warning appear but I think it shouldn't, in gcc 5.4.0 warn.c throws
+-Wmaybe-uninitialized, but no_warn.c works fine. Is this a bug on gcc? I asked
+in StackOverflow:
+https://stackoverflow.com/questions/46543816/is-gccs-optimizer-doing-something-weird-here/
+
+Maybe report it on GCC.

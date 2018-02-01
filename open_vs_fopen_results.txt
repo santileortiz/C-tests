@@ -1,0 +1,49 @@
+These were the results of loading a 500Mb file of random data into memory using
+open() and fopen(), two runs were made for each one the first one is a cold
+run, the second one is done shortly after.
+
+santiago:tests$ time ./open_vs_fopen open.dat 1
+loading 524288000 bytes
+open():
+[10.510000 us]: File open.
+[767.143372 ms]: File read.
+[13.271999 us]: File close.
+
+real	0m10.477s
+user	0m0.000s
+sys	0m0.772s
+
+santiago:tests$ time ./open_vs_fopen open.dat 1
+loading 524288000 bytes
+open():
+[10.179000 us]: File open.
+[115.967117 ms]: File read.
+[6.571000 us]: File close.
+
+real	0m0.133s
+user	0m0.000s
+sys	0m0.120s
+
+--------------------------------------------------
+santiago:tests$ time ./open_vs_fopen fopen.dat 2
+loading 524288000 bytes
+fopen():
+[10.207000 us]: File open.
+[781.535400 ms]: File read.
+[15.309000 us]: File close.
+
+real	0m9.026s
+user	0m0.000s
+sys	0m0.788s
+
+santiago:tests$ time ./open_vs_fopen fopen.dat 2
+loading 524288000 bytes
+fopen():
+[9.437000 us]: File open.
+[118.032654 ms]: File read.
+[6.855000 us]: File close.
+
+real	0m0.136s
+user	0m0.004s
+sys	0m0.120s
+santiago:tests$ 
