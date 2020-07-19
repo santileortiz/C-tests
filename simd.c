@@ -180,6 +180,7 @@ void fast_subs_by_2_pow_n()
     printf ("   OK: %d + (%d) = %d\n", x, subs_no_cast, x + subs_no_cast);
     printf ("   OK: %d - (%d) = %d\n", x, subs_no_cast, x - subs_no_cast);
 
+
     uint8_t y[] = {255, 0, 128, 100, 21, 31, 40, 230};
 
     __m128i signflip = _mm_set1_epi8 (-128);
